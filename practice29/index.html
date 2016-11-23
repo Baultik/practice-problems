@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 29: Do Math</title>
+    <script>
+        function doMath(num1, num2, operator) {
+            if (typeof operator !== "string") return;
+            var result;
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                case "*":
+                case "x":
+                case "X":
+                    result = num1 * num2;
+                    break;
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
