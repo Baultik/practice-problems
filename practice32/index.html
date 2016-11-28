@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Middle of string</title>
+    <script>
+         //Build a function, find_middle_letters, that finds the middle of a string.
+         //If the string is an odd number of characters, it returns 1 letter.
+         //If it is an even number of characters, it returns 2 characters. It takes a string as a parameter
+
+        function findMiddleLetter(str) {
+            if (str.length == 0) return "";
+
+            var middleIndex = Math.floor(str.length / 2);//  2/2 = 1
+            if (str.length % 2) {
+                //odd
+                return str.charAt(middleIndex);
+            } else {
+                //even
+                return str.charAt(middleIndex - 1) + str.charAt(middleIndex);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
