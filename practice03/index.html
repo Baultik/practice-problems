@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One to multiple</title>
+    <script>
+        function group(groupArray) {
+            var outputArray = [[],[],[]];
+
+            for (var i = 0; i < groupArray.length; i++) {
+                var thing = groupArray[i];
+                var stringArray = outputArray[0];
+                var numArray = outputArray[1];
+                var boolArray = outputArray[2];
+
+                switch (typeof thing) {
+                    case "string":
+                        stringArray.push(thing);
+                        break;
+                    case "number":
+                        numArray.push(thing);
+                        break;
+                    case "boolean":
+                        boolArray.push(thing);
+                        break;
+                }
+            }
+
+            return outputArray;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
