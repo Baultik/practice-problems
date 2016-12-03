@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sort</title>
+
+    <script>
+        function bubble(strArray) {
+            var bubbling = true;
+            while (bubbling) {
+                bubbling = false;
+                console.log("sorting...");
+                for (var i = 0; i < strArray.length - 1; i++) {
+                    var first = strArray[i];
+                    var second = strArray[i+1];
+                    if (first > second) {
+                        strArray[i] = second;
+                        strArray[i+1] = first;
+                        bubbling = true;
+                        console.log("switching " + first + " and " + second);
+                    }
+                }
+            }
+            console.log("sort done");
+            return strArray;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
