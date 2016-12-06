@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numeric Spirals</title>
+    <script>
+        function fibSequence(count) {
+            var output = [0,1];
+            for (var i = output.length; i < count; i++) {
+                var past1 = output[i-2];
+                var past2 = output[i-1];
+                output.push(past1+past2);
+            }
+            return output.toString();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
