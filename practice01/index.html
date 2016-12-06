@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bigger words</title>
+    <script>
+        function biggerWords(word, wordArray) {
+            var output = [];
+            for (var i in wordArray) {
+                var currentWord = wordArray[i];
+                if (currentWord.length > word.length) {
+                    output.push(currentWord);
+                }
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
