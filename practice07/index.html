@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Igpay Atinlay</title>
+    <script>
+        function translate(str) {
+            var output = "";
+            var words = str.split(" ");
+            for (var i in words) {
+                var word = words[i];
+                output += word.substr(1) + word.charAt(0) + "ay ";
+            }
+            return output.toLowerCase();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
