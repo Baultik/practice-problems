@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skippy number</title>
+    <script>
+        function skippyNumbers(num) {
+            var output = [];
+
+            for (var i = 0, n = num; i < 4; i++, n+=3) {
+                output.push(n);
+                output.push(n+1);
+            }
+
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
