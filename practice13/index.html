@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>math comp sequences</title>
+    <script>
+        function mathSequences(num1, num2) {
+            var output = [];
+            var comp = "";
+
+            comp = num1 + "+" + num2 + "=" + (num1 + num2);
+            output.push(comp);
+
+            comp = num1 + "-" + num2 + "=" + (num1 - num2);
+            output.push(comp);
+
+            comp = num1 + "*" + num2 + "=" + (num1 * num2);
+            output.push(comp);
+
+            comp = num1 + "/" + num2 + "=" + (num1 / num2);
+            output.push(comp);
+
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
