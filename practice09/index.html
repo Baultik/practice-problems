@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitting words</title>
+    <script>
+        function fittingWords(str, strArray) {
+            var output = [];
+            for (var i in strArray) {
+                var word = strArray[i];
+                var fits = true;
+
+                for (var j in str) {
+                    if (!word.includes(str.charAt(j))) {
+                        fits = false;
+                    }
+                }
+
+                if (fits) output.push(word);
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
