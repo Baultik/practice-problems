@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even Odds</title>
+    <script>
+        function evenOdd(arr) {
+            var sorted = {odd:[],even:[]};
+            for (var i in arr) {
+                var num = arr[i];
+                if (!isNaN(num)) {
+                    if (num % 2 == 0) {
+                        sorted.even.push(num);
+                    }else {
+                        sorted.odd.push(num);
+                    }
+                }
+            }
+            return sorted;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
