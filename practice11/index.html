@@ -10,9 +10,13 @@
                 var num = arr[i];
                 if (!isNaN(num)) {
                     if (num % 2 == 0) {
-                        sorted.even.push(num);
+                        if (sorted.even.indexOf(num) === -1) {
+                            sorted.even.push(num);
+                        }
                     }else {
-                        sorted.odd.push(num);
+                        if (sorted.even.indexOf(num) === -1) {
+                            sorted.odd.push(num);
+                        }
                     }
                 }
             }
