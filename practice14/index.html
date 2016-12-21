@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array factors</title>
+    <script>
+        function arrayFactors(arr) {
+            var output = {};
+            for (var i = 0; i < arr.length; i++) {
+                var compare = arr[i];
+                var match = [];
+                for (var j = 0; j < arr.length;j++) {
+                    var item = arr[j];
+                    if (item === compare) continue;
+                    if (!(compare % item)) {
+                        match.push(item);
+                    }
+                }
+                output[compare] = match;
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
