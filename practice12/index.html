@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>math sequence</title>
+    <script>
+        function mathSequence(num) {
+            var output = [];
+            var x = num;
+            for (var i = 0; i < num+1*num; i+=num+1) {
+                for (var j = x; j < 10*x; j+=x) {
+                    output.push(j+num+i)
+                }
+                x /= num*num;
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
