@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>romans</title>
+    <script>
+        var values = [["1","I"],["5","V"],["10","X"],["50","L"],["100","C"],["500","D"],["1000","M"]];
+        function romanConvert(num) {
+            if (num === 0) return 0;
+
+            var input = parseInt(num);
+            var low = 0;
+            for (var i = 0; i < values.length; i++) {
+                var value = parseInt(values[i][0]);
+                if (value === input) return values[i][1];
+
+                if (value < input) {
+                    low = i;
+                } else {
+                    break;
+                }
+            }
+
+            return buildNumerals(num,low,"");
+        }
+
+        function buildNumerals(num,index,numeralStr) {
+            var numeral = values[index][1];
+            var numeric = values[index][0];
+            //console.log("Number: "+num+" index:"+index+" numerals:"+numeralStr);
+
+            if (num == 0) return numeralStr;
+            if (num == 1) return numeralStr+"I";
+
+            var higher = values[index+1];
+            if (higher) {
+                for (var i = index; i >= 0; i--) {
+                    var diff = higher[0] - values[i][0];
+
+                    if (diff > higher[0] / 2 && diff <= num) {
+                        return buildNumerals(num - (higher[0] - values[i][0]),index,numeralStr+values[i][1]+higher[1]);
+                    }
+                }
+            }
+
+            if (num > numeric) {
+                var remainder = num - numeric;
+                numeralStr += numeral;
+
+                return buildNumerals(remainder,Math.max(index,0),numeralStr);
+            }
+
+            return buildNumerals(num,Math.max(index-1,0),numeralStr);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
