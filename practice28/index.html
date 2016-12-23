@@ -31,6 +31,7 @@
 
             if (num == 0) return numeralStr;
             if (num == 1) return numeralStr+"I";
+            if (num >= 1000) return buildNumerals(num-1000,index,numeralStr+"M");
 
             var higher = values[index+1];
             if (higher) {
