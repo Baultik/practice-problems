@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>numeric toggles</title>
+    <script>
+        function numericToggles(num) {
+            var out = num;
+            var inc = num;
+            var output = [];
+            for (var i = 0; i < num*num; i++) {
+                for (var j = 0; j < num; j++) {
+                    out += inc;
+                    output.push(out);
+                }
+                out *= -1;
+                inc *= -1;
+                inc = inc > 0 ? ++inc : --inc;
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
