@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>factor</title>
+    <script>
+        function factor(num) {
+            var incrementBy = 3;
+            var output = [];
+            for (var i = 0, zeros = 1, insert = 0; i < 11; i++) {
+                if (zeros >= num) {
+                    zeros = 0;
+                    insert += incrementBy;
+                    output.push(insert);
+                } else {
+                    zeros++;
+                    output.push(0);
+                }
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
