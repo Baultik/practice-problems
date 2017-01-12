@@ -6,19 +6,17 @@
     <script>
         function permutate(str) {
             var output = [];
-
-            for (var i = 0; i < str.length; i++) {
-                var letter = str[i];
-                recurse(letter,str.substr(0,i) + str.substr(i+1),i,output);
-
-            }
-
+            recurse("",str,output);
             return output;
         }
 
-        function recurse (initial, current, index, out) {
+        function recurse (initial, current, out) {
             if (current.length > 2) {
-                recurse(initial+current[0],current.slice(1),index+1,out);
+                for (var i = 0; i < current.length; i++) {
+                    var letter = current[i];
+                    recurse(initial+letter,current.substr(0,i) + current.substr(i+1),out);
+
+                }
             } else {
                 out.push(initial+current[0]+current[1]);
                 out.push(initial+current[1]+current[0]);
@@ -26,6 +24,9 @@
 
             return out;
         }
+
+        console.log(permutate("abc"));
+        console.log(permutate("abcd"));
     </script>
 </head>
 <body>
