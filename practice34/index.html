@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function timeConvert(timeStr) {
+            var i = timeStr.indexOf(":");
+            var hour = timeStr.substr(0,i);
+            var minSec = timeStr.substring(i,timeStr.length-2);
+            var m = timeStr.substr(-2,1);
+            if (m.toUpperCase() === "P"){
+                hour = parseInt(hour) + 12;
+            }
+
+            return hour + minSec;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
