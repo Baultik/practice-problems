@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>high low</title>
+    <script>
+        function findHighLow(valueStr) {
+            var high = 0, low = 10e9;
+            var valArr = valueStr.split(" ");
+            for (var i = 0; i < valArr.length; i++) {
+
+                var sum = 0;
+
+                for (var j = 0; j < valArr.length; j++) {
+                    if (j == i) continue;
+                    sum += parseInt(valArr[j]);
+                }
+                if (sum > high) high = sum;
+                if (sum < low) low = sum;
+            }
+
+            return "" + low + " " + high;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
