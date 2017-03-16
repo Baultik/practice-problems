@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grades</title>
+    <script>
+        function adjustGrade(gradeArr) {
+            for (var i = 0; i < gradeArr.length; i++) {
+                var grade = gradeArr[i];
+                if (grade < 38) continue;
+
+
+                var remain = ((Math.floor(grade / 5) + 1) * 5) - grade;
+                if (remain < 3) {
+                    gradeArr[i] = grade + remain;
+                }
+            }
+
+            return gradeArr;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
